@@ -40,7 +40,6 @@ def main() :
         source, target, name = data["source"], data["target"], data["name"][0]
         source, target = models.assignDevice(opt, source, target)
         
-        source, target = models.assignDevice(opt, source, target)
         S2T, T2S, S2T2S, T2S2T = model(source, target, mode="inference")
         
         utils.saveImage(S2T, n2cSavePath, name)
